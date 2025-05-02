@@ -22,8 +22,15 @@ vocab_size = len(vectorizer.vocabulary_)
 terms_per_doc = (tfidf_matrix > 0).sum(axis=1)
 avg_terms_per_doc = float(terms_per_doc.mean())
 
-# Define your group members
-group_members = ["Chuwe Terrence", "Pennyvia Michael Kanengoni", "Emmah Zvakafa", "Natasha Taundi","Tadiwanashe Musora"]
+# Define your group members as a list of dictionaries
+group_members = [
+    {"name": "Chuwe Terrence", "reg": "R216888K", "program": "HAI"},
+    {"name": "Pennyvia Michael Kanengoni", "reg": "R216896T", "program": "HAI"},
+    {"name": "Emmah Zvakafa", "reg": "R216905E", "program": "HAI"},
+    {"name": "Natasha Taundi", "reg": "R2110558", "program": "HAI"},
+    {"name": "Tadiwanashe Musora", "reg": "R219287X", "program": "HAI"},
+    {"name": "Tanatswa Shamu", "reg": "R216894Z", "program": "HAI"}
+]
 
 
 # --- Flask Routes ---

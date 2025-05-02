@@ -153,15 +153,21 @@
       <h5 class="center">Meet the Team</h5>
       <div class="row">
         <div class="col s12 m6 offset-m3">
-          <table class="highlight centered team-table">
+          <table border="1" cellpadding="8" cellspacing="0">
             <thead>
               <tr>
-                <th>Group Member</th>
+                <th>Name</th>
+                <th>Reg Number</th>
+                <th>Program</th>
               </tr>
             </thead>
             <tbody>
               {% for member in group_members %}
-                <tr><td>{{ member }}</td></tr>
+              <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.reg }}</td>
+                <td>{{ member.program }}</td>
+              </tr>
               {% endfor %}
             </tbody>
           </table>
